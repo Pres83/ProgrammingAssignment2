@@ -8,12 +8,12 @@
 ## that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-  ## x is a square invertible matrix
-  ## function returns a list containing functionS to:
-  ##   - set the value of the matrix
-  ##   - get the value of the matrix
-  ##   - set the value of the inverse matrix
-  ##   - get the value of the inverse matrix
+ ## x is a square invertible matrix
+ ## function returns a list containing functionS to:
+ ##   - set the value of the matrix
+ ##   - get the value of the matrix
+ ##   - set the value of the inverse matrix
+ ##   - get the value of the inverse matrix
   m <-NULL
   set<-function(y){
     x <<- y
@@ -27,14 +27,14 @@ makeCacheMatrix <- function(x = matrix()) {
        getmatrix=getmatrix)
 }
 
-## cacheSolve: This function computes the inverse of the special "matrix" 
-## returned by makeCacheMatrix above. 
-## If the inverse has already been calculated (and the matrix has not changed), 
-## then the cachesolve retrieve the inverse from the cache
+ ## cacheSolve: This function computes the inverse of the special "matrix" 
+ ## returned by makeCacheMatrix above. 
+ ## If the inverse has already been calculated (and the matrix has not changed), 
+ ## then the cachesolve retrieve the inverse from the cache
 
 cacheSolve <- function(x, ...) {
-  ## x is output of makeCacheMatrix()
-  ## return: inverse of the original matrix input to makeCacheMatrix()
+ ## x is output of makeCacheMatrix()
+ ## return: inverse of the original matrix input to makeCacheMatrix()
   m <- x$getmatrix()
   # if the inverse has already been calculated
   if(!is.null(m)){
@@ -62,13 +62,20 @@ cacheSolve <- function(x, ...) {
  
  ## No cache in the first run
  ## cacheSolve(m)
+
+## cacheSolve(m)
  ##      [,1] [,2]
  ## [1,]  0.5  0.0
  ## [2,]  0.0  0.5
  
  ## Retrieving from the cache in the second run
+
  ## cacheSolve(m)
+
+## cacheSolve(m)
+
  ## getting cached data
  ##      [,1] [,2]
  ## [1,]  0.5  0.0
  ## [2,]  0.0  0.5
+
